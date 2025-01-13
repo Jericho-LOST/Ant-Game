@@ -6,21 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LVL Scenes/FirstSpawn.unity
-    guid: 43f35bc7e608dad46998b4a600463ba9
+    path: Assets/LVL Scenes/Start menu.unity
+    guid: 9ed4fc971be2d3c449e2836c715d2ba7
   - enabled: 1
-    path: Assets/LVL Scenes/Level 01 Bee.unity
-    guid: 48912635f5d888f4baaad516d941f55a
+    path: Assets/LVL Scenes/Level 1.unity
+    guid: 5d37cf333e1a5d54ea74c7d869f57f92
   - enabled: 1
-    path: Assets/LVL Scenes/Level 02 Bird.unity
-    guid: 9fc0d4010bbf28b4594072e72b8655ab
-  - enabled: 1
-    path: Assets/LVL Scenes/TEST.unity
-    guid: 0f88b6fcdcfccea4fb428e883ad9d984
-  - enabled: 1
-    path: Assets/LVL Scenes/LTutorial.unity
-    guid: 55c938bb1040cf540b591e7da6e8bdca
-  - enabled: 1
-    path: Assets/LVL Scenes/RollCredits.unity
-    guid: 16e3376a739c7c54db7318fac254c910
+    path: Assets/LVL Scenes/Water LVL.unity
+    guid: 19f8ce8ada220f948851cb6010b7ae84
   m_configObjects: {}
