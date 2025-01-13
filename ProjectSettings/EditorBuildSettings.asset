@@ -6,12 +6,15 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/LVL Scenes/Start menu.unity
+    path: Assets/LVL Scenes/1 StartMenu.unity
     guid: 9ed4fc971be2d3c449e2836c715d2ba7
   - enabled: 1
-    path: Assets/LVL Scenes/Level 1.unity
+    path: Assets/LVL Scenes/2 FirstLVL.unity
     guid: 5d37cf333e1a5d54ea74c7d869f57f92
   - enabled: 1
-    path: Assets/LVL Scenes/Water LVL.unity
+    path: Assets/LVL Scenes/3 Hold It!.unity
+    guid: e23783e7dc859c74d8386d09d8fa3571
+  - enabled: 1
+    path: Assets/LVL Scenes/4 Water LVL.unity
     guid: 19f8ce8ada220f948851cb6010b7ae84
   m_configObjects: {}

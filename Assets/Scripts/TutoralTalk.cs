@@ -9,18 +9,18 @@ public class TutoralTalk : MonoBehaviour
 
 
     public Text dialogueText; //how many of these do i need?
-    public GameObject dialogueManager; // this will be a empty game opbject that is a child of whatever platform want to triget the dialouge 
+   // public GameObject dialogueManager; // this will be a empty game opbject that is a child of whatever platform want to triget the dialouge 
     public GameObject dialogueBox;  //the pannel 
     public string[] dialogueLines;  
     public float textSpeed = 0.05f;
-    public GameObject playerSprite;
+   // public GameObject playerSprite;
 
     private int currentLineIndex = 0;  //i wanted fancy type writer-transition text (this just tracks the crrent line of dialogue)
     private bool isTyping = false;  // Checks if the text is still typing
     private bool dialogueActive = false;  // Checks if dialogue is active..dont know how the two are different tbh-
     
   
-
+    
     void Update()
     {
         if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
@@ -85,7 +85,7 @@ public class TutoralTalk : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         dialogueActive = false;
-        playerSprite.SetActive(false);
+        //playerSprite.SetActive(false);
     }
 
    // void OnTriggerEnter(Collider other)
