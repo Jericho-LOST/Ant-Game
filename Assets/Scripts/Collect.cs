@@ -7,7 +7,7 @@ public class Collect : MonoBehaviour
 {
     int coins = 0;
 
-   // [SerializeField] Text coinsText;
+    [SerializeField] Text coinsText;
     //[SerializeField] AudioSource coinSound;
 
     private void OnTriggerEnter(Collider other)
@@ -17,7 +17,7 @@ public class Collect : MonoBehaviour
            // coinSound.Play();
             Destroy(other.gameObject);
             coins++;
-           // coinsText.text = "Coins:" + coins; 
+           coinsText.text = "Fruits:" + coins; 
 
            // coinSound.Play();
 
