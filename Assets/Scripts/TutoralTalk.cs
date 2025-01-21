@@ -13,7 +13,7 @@ public class TutoralTalk : MonoBehaviour
     public GameObject dialogueBox;  //the pannel 
     public string[] dialogueLines;  
     public float textSpeed = 0.05f;
-   // public GameObject playerSprite;
+   public GameObject fullSprite;
 
     private int currentLineIndex = 0;  //i wanted fancy type writer-transition text (this just tracks the crrent line of dialogue)
     private bool isTyping = false;  // Checks if the text is still typing
@@ -23,11 +23,11 @@ public class TutoralTalk : MonoBehaviour
     
     void Update()
     {
-        if (dialogueActive && Input.GetKeyDown(KeyCode.Space))
+        if (dialogueActive && Input.GetKeyDown(KeyCode.F))
         {
             if (isTyping)
             {
-                // If the player presses space while text is typing this finishes the line instantly
+                // If the player presses Fs while text is typing this finishes the line instantly
                 StopAllCoroutines();
                 dialogueText.text = dialogueLines[currentLineIndex];
                 isTyping = false;
@@ -85,9 +85,10 @@ public class TutoralTalk : MonoBehaviour
     {
         dialogueBox.SetActive(false);
         dialogueActive = false;
-        //playerSprite.SetActive(false);
+        fullSprite.SetActive(false);
     }
 
+    //just me trying to figure out how to do it when object touches player
    // void OnTriggerEnter(Collider other)
    // {
      //   if (other.gameObject.name == "Player")
