@@ -2,25 +2,25 @@ using System.Collections;
 using UnityEngine;
 using UnityEngine.UI;
 
-public class TutoralTalk : MonoBehaviour
+public class AntPrompt: MonoBehaviour
 {
+//this is the TutorialTalk script but is prompted when the player presses T hen in proximity to an AntBox
 
-    // this script will be given to the "Trigger" or diolouge manager (whichever sounds cooler)
 
-
-    public Text dialogueText; //how many of these do i need?
-   // public GameObject dialogueManager; // this will be a empty game opbject that is a child of whatever platform want to triget the dialouge 
-    public GameObject dialogueBox;  //the pannel 
-    public string[] dialogueLines;  
+    public Text dialogueText;
+    public GameObject dialogueBox; 
+    public GameObject AntBox; // 
+    public string[] dialogueLines;
+    public string [] pressT;//
     public float textSpeed = 0.05f;
-   public GameObject fullSprite;
+    public GameObject fullSprite;
 
     private int currentLineIndex = 0;  //i wanted fancy type writer-transition text (this just tracks the crrent line of dialogue)
     private bool isTyping = false;  // Checks if the text is still typing
     private bool dialogueActive = false;  // Checks if dialogue is active..dont know how the two are different tbh-
-    
-  
-    
+
+
+
     void Update()
     {
         if (dialogueActive && Input.GetKeyDown(KeyCode.F))
@@ -69,7 +69,7 @@ public class TutoralTalk : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
-        dialogueText.text = ""; 
+        dialogueText.text = "";
 
         // Type each character one by one
         foreach (char c in dialogueLines[currentLineIndex].ToCharArray())
@@ -89,13 +89,13 @@ public class TutoralTalk : MonoBehaviour
     }
 
     //just me trying to figure out how to do it when object touches player
-   // void OnTriggerEnter(Collider other)
-   // {
-     //   if (other.gameObject.name == "Player")
-       // {
-         //   StartDialogue();
+    // void OnTriggerEnter(Collider other)
+    // {
+    //   if (other.gameObject.name == "Player")
+    // {
+    //   StartDialogue();
 
-        //}
-   // }
+    //}
+    // }
 }
 
