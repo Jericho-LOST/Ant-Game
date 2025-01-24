@@ -6,6 +6,7 @@ using UnityEngine.SceneManagement;
 
 public class PlayerLife : MonoBehaviour
 {
+    [SerializeField] AudioSource deathSound;
     bool dead = false;
  private void OnCollisionEnter(Collision collision)
     {
@@ -29,6 +30,7 @@ public class PlayerLife : MonoBehaviour
     {
         if (transform.position.y <-0.5f && !dead)
             {
+            deathSound.Play();
             Die() ;
         }
     }
