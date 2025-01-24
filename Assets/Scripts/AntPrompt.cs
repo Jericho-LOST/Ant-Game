@@ -4,14 +4,14 @@ using UnityEngine.UI;
 
 public class AntPrompt: MonoBehaviour
 {
-//this is the TutorialTalk script but is prompted when the player presses T hen in proximity to an AntBox
+//this is the TutorialTalk script but is prompted when the player presses T when in proximity to an AntBox
 
 
     public Text dialogueText;
     public GameObject dialogueBox; 
-    public GameObject AntBox; // 
+    public GameObject AntBox; // this detects if you are in contact with the box//in the vecinity 
     public string[] dialogueLines;
-    public string [] pressT;//
+    public Text [] pressT;//the "press T to Talk" notif that shows up for the player
     public float textSpeed = 0.05f;
     public GameObject fullSprite;
 
@@ -20,7 +20,7 @@ public class AntPrompt: MonoBehaviour
     private bool dialogueActive = false;  // Checks if dialogue is active..dont know how the two are different tbh-
 
 
-
+    
     void Update()
     {
         if (dialogueActive && Input.GetKeyDown(KeyCode.F))
@@ -46,6 +46,7 @@ public class AntPrompt: MonoBehaviour
     public void StartDialogue()
     {
         // Activate the dialogue box and start with the first line
+       // pressT.SetValue(true);
         dialogueBox.SetActive(true);
         dialogueActive = true;
         currentLineIndex = 0;
@@ -86,6 +87,8 @@ public class AntPrompt: MonoBehaviour
         dialogueBox.SetActive(false);
         dialogueActive = false;
         fullSprite.SetActive(false);
+     //   pressT.SetValue(false);
+            
     }
 
     //just me trying to figure out how to do it when object touches player
