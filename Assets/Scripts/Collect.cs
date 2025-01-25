@@ -19,9 +19,6 @@ public class Collect : MonoBehaviour
             coins++;
            coinsText.text = "Fruits:" + coins; 
 
-           
-
-
         }
 
     }

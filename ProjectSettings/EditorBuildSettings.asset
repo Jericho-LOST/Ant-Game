@@ -18,6 +18,9 @@ EditorBuildSettings:
     path: Assets/LVL Scenes/4 Water LVL.unity
     guid: 19f8ce8ada220f948851cb6010b7ae84
   - enabled: 1
+    path: Assets/LVL Scenes/5CatchMG.unity
+    guid: fa81e455bcbd0ff4ab7c191958ed0ff3
+  - enabled: 1
     path: Assets/LVL Scenes/6HumanRun.unity
     guid: cfafdc6d3951d84428da600dea146064
   m_configObjects: {}
