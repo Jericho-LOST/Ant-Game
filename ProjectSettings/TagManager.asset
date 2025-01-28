@@ -9,6 +9,7 @@ TagManager:
   - Coin
   - Wood
   - Texture
+  - Ant
   layers:
   - Default
   - TransparentFX

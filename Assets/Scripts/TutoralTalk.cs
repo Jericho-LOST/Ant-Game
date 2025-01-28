@@ -34,7 +34,7 @@ public class TutoralTalk : MonoBehaviour
             }
             else
             {
-                // Show the next line of dialogue
+                // Shows the next line of dialogue
                 NextLine();
             }
         }

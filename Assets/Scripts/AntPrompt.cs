@@ -1,4 +1,5 @@
-using System.Collections;
+                 using System.Collections;
+using Unity.VisualScripting;
 using UnityEngine;
 using UnityEngine.UI;
 
@@ -9,14 +10,14 @@ public class AntPrompt: MonoBehaviour
 
     public Text dialogueText;
     public GameObject dialogueBox; 
-   // public GameObject AntBox; // this detects if you are in contact with the box//in the vecinity 
+                
     public string[] dialogueLines;
     public GameObject pressT;//the "press T to Talk" notif that shows up for the player
     public float textSpeed = 0.05f;
     public GameObject fullSprite; //this helps the box dissapear (i oriiginally used it to switch sprites during diolouge scenes)
 
 
-    private bool isNearAnt = false; //checking if player is near ant//object i want to trigger diolouge 
+    
     private int currentLineIndex = 0;  
     private bool isTyping = false;  
     private bool dialogueActive = false;
@@ -24,20 +25,31 @@ public class AntPrompt: MonoBehaviour
     private void Start()
     {
         dialogueBox.SetActive(false);
+        pressT.SetActive(false);
     }
     
 
     
-    void Update()
-    {
+    
 
-        if (isNearAnt && Input.GetKeyDown(KeyCode.T)) // T to talk makes sence right?
+        private void OnCollisionEnter(Collision collision)
         {
-            StartDialogue(); // this should start the diologe when the player is in proximity and presses T 
+
+        if (collision.gameObject.CompareTag("Ant"))
+        {
+            pressT.SetActive(true);
         }
 
 
+        if (collision.gameObject.CompareTag("Ant") && Input.GetKeyDown(KeyCode.T)) //!! code won't repond to input
+        {
+            StartDialogue();
+            pressT.SetActive(false);
+        }
 
+    }
+    void Update()
+    {
         if (dialogueActive && Input.GetKeyDown(KeyCode.F))
         {
             if (isTyping)
@@ -55,25 +67,13 @@ public class AntPrompt: MonoBehaviour
         }
     }
 
-    private void OnTriggerEnter(Collider other)
-    {
-        if (other.CompareTag("Player"))
-        {
-            isNearAnt = true;
-        }
-    }
-
-    private void OnTriggerExit(Collider other) //genuinely diddn't know "on trigger exit" exitsted (this checks if player has left the "trigger Zone")
-    {
-        if (other.CompareTag("Player"))
-        { isNearAnt = false;}
-    }
     public void StartDialogue()
     {
-        // Activate the dialogue box and start with the first line
+        // this activateas the dialogue box and starts the first line
        // pressT.SetValue(true);
         dialogueBox.SetActive(true);
         dialogueActive = true;
+        fullSprite.SetActive(true);
         currentLineIndex = 0;
         StartCoroutine(TypeLine());
     }
