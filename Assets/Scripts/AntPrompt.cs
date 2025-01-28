@@ -41,7 +41,7 @@ public class AntPrompt: MonoBehaviour
         }
 
 
-        if (collision.gameObject.CompareTag("Ant") && Input.GetKeyDown(KeyCode.T)) //!! code won't repond to input
+        if (collision.gameObject.CompareTag("Ant") ) //&& Input.GetKeyDown(KeyCode.T)) //!! code won't repond to input
         {
             StartDialogue();
             pressT.SetActive(false);
