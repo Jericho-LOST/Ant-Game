@@ -591,7 +591,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &68627134
 RectTransform:
   m_ObjectHideFlags: 0
@@ -9732,7 +9732,7 @@ MonoBehaviour:
   dialogueText: {fileID: 6227850}
   dialogueBox: {fileID: 2053945565}
   dialogueLines:
-  - 'god i hope this works '
+  - Can you help me?
   pressT: {fileID: 101564363}
   textSpeed: 0.05
   fullSprite: {fileID: 49804065}
