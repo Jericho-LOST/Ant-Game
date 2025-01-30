@@ -46,7 +46,7 @@ public class AntPrompt: MonoBehaviour
         {
             StartDialogue();
             pressT.SetActive(false);
-            Debug.Log("anything");
+            Cursor.lockState = CursorLockMode.None;
         }
 
     }

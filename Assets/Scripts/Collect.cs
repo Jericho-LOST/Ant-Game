@@ -10,6 +10,7 @@ public class Collect : MonoBehaviour
     [SerializeField] Text coinsText;
     //public GameObject zero; //this is such a small detail no onw will ever notice it lmao
     [SerializeField] Text McoinsText;
+    [SerializeField] Text PlantssText;
     [SerializeField] AudioSource coinSound;
     [SerializeField] AudioSource coinSound2;
 
@@ -38,8 +39,7 @@ public class Collect : MonoBehaviour
             coinSound.Play();
             Destroy(other.gameObject);
             coins++;
-            coinsText.text = "Mushrooms:" + coins;
-
+            PlantssText.text= "Plants:" + coins;
         }
     }
 }
