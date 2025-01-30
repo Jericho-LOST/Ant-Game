@@ -11,6 +11,7 @@ TagManager:
   - Texture
   - Ant
   - MegaCoin
+  - MCoin
   layers:
   - Default
   - TransparentFX

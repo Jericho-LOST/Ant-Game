@@ -41,10 +41,12 @@ public class AntPrompt: MonoBehaviour
         }
 
 
-        if (collision.gameObject.CompareTag("Ant") ) //&& Input.GetKeyDown(KeyCode.T)) //!! code won't repond to input
+        if (collision.gameObject.CompareTag("Ant"))// && Input.GetKeyDown(KeyCode.T)) //!! code won't repond to input // needs to heva an "on trigger enter" (and exit) rather than collider
+
         {
             StartDialogue();
             pressT.SetActive(false);
+            Debug.Log("anything");
         }
 
     }
