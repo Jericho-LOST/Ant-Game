@@ -10,6 +10,7 @@ TagManager:
   - Wood
   - Texture
   - Ant
+  - MegaCoin
   layers:
   - Default
   - TransparentFX

@@ -11,5 +11,13 @@ public class Plus4LVL : MonoBehaviour
         {
             SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex + 4); //finishing this at 3:08am so this better work
         }
+
+        if (other.gameObject.name == "PlayerSpawn")
+        {
+            SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex - 4); 
+        }
+
     }
+
+
 }

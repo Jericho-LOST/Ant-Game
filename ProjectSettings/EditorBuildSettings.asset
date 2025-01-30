@@ -23,4 +23,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/LVL Scenes/6HumanRun.unity
     guid: cfafdc6d3951d84428da600dea146064
+  - enabled: 1
+    path: Assets/LVL Scenes/7WaterSpawn.unity
+    guid: 81ec4e6770f02094d816f5a6ee2f9489
   m_configObjects: {}
