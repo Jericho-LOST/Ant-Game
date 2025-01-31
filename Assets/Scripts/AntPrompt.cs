@@ -16,7 +16,7 @@ public class AntPrompt: MonoBehaviour
     public float textSpeed = 0.05f;
     public GameObject fullSprite; //this helps the box dissapear (i oriiginally used it to switch sprites during diolouge scenes)
 
-
+    public AudioSource TalkSound;
     
     private int currentLineIndex = 0;  
     private bool isTyping = false;  
@@ -96,8 +96,10 @@ public class AntPrompt: MonoBehaviour
 
     IEnumerator TypeLine()
     {
-        isTyping = true;
+        isTyping = true; 
+        TalkSound.Play();
         dialogueText.text = "";
+       
 
         // Type each character one by one
         foreach (char c in dialogueLines[currentLineIndex].ToCharArray())

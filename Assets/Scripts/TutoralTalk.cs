@@ -14,6 +14,8 @@ public class TutoralTalk : MonoBehaviour
     public string[] dialogueLines;  
     public float textSpeed = 0.05f;
    public GameObject fullSprite;
+    public AudioSource TalkSound;
+
 
     private int currentLineIndex = 0;  //i wanted fancy type writer-transition text (this just tracks the crrent line of dialogue)
     private bool isTyping = false;  // Checks if the text is still typing
@@ -69,6 +71,7 @@ public class TutoralTalk : MonoBehaviour
     IEnumerator TypeLine()
     {
         isTyping = true;
+        TalkSound.Play();
         dialogueText.text = ""; 
 
         // Type each character one by one
